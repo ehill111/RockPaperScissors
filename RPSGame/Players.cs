@@ -8,5 +8,12 @@ namespace RPSGame
 {
     class Players
     {
+        string names;
+        int points;
+
+
+
+
+
     }
 }

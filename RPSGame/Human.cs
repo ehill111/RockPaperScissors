@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSGame
 {
-    class Gestures
+    class Human
     {
-        List<string> gestures;
-
-
-
-
-
-
     }
 }
