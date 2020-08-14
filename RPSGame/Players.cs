@@ -9,7 +9,7 @@ namespace RPSGame
     class Players
     {
         string playerType;
-        int point;
+        int point = 0;
         
        
 

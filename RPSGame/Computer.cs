@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPSGame
 {
-    class Computer
+    class Computer : Players
     {
+
     }
 }
