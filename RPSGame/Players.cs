@@ -8,17 +8,15 @@ namespace RPSGame
 {   //Member variables have/has a/an...
     class Players
     {
-        string playerType;
-        int point = 0;
         
-       
-
-    //Constructors initialize values upon instantiation.
-        public Players(string playerType, int point)
+        int point = 0;
+        string name;
+        
+     //Constructors initialize values upon instantiation.
+        public Players(int point, string name)
         {
-            this.playerType = playerType;
             this.point = point;
-            
+            this.name = name;
         }
 
 
