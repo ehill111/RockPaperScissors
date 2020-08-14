@@ -32,7 +32,7 @@ namespace RPSGame
         /*public Game(int NumberOfRounds)
         {
             gameScore = NumberOfRounds;
-            //So, I only "this." for parameters I pass?
+            //So, I only need "this." for parameters I pass?
             playerOne = new Players();
             playerOne.point++;
         }*/
@@ -46,7 +46,7 @@ namespace RPSGame
             
         }
 
-
+        //
 
 
 

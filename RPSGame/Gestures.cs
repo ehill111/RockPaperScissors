@@ -17,11 +17,17 @@ namespace RPSGame
 
         public void BuildGestureList()
         {
+            gestures = new List<string>();
             gestures.Add("rock");
             gestures.Add("paper");
             gestures.Add("scissors");
             gestures.Add("lizard");
             gestures.Add("spock");
+
+            Random t = new Random();
+            int index = t.Next(0,5);
+            Console.WriteLine(gestures[index]);
+            Console.ReadLine();
         }
 
 

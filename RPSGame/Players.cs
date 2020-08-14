@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace RPSGame
 {   //Member variables have/has a/an...
-    class Players
+    public class Players
     {
-        
-        int point = 0;
-        string name;
+
+        public int point;
+        public string name;
+        public string gesture;
         
      //Constructors initialize values upon instantiation.
-        public Players(int point, string name)
+        public Players()
         {
-            this.point = point;
-            this.name = name;
+            point = 0;
         }
 
-
-
+        //Methods do something.
+        public virtual void SelectGesture()
+        {
+            
+            
+            
+        }
 
 
     }

@@ -8,9 +8,20 @@ namespace RPSGame
 {
     class Human : Players
     {
-        public Human()
+        
+        public Human(string name)
         {
+            this.name = name;
+        }
 
+        public override void SelectGesture()
+        {
+            List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+
+            Console.WriteLine("");
+
+            int index = int.Parse(Console.ReadLine());
+            gesture = gestures[index];
         }
     }
 }
