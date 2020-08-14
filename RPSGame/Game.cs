@@ -22,7 +22,9 @@ namespace RPSGame
 {   
     class Game
     {
-        string players;
+        string humanPlayer;
+        string computerPlayer;
+        int score;
 
 
 
