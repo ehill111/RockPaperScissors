@@ -19,13 +19,11 @@ using System.Threading.Tasks;
 //Winner is declared champion!
 
 namespace RPSGame
-{   
+{   //Member variables have/has a/an...
     class Game
     {
-        string humanPlayer;
-        string computerPlayer;
-        int score;
-
+        int setScore;
+        int gameScore;
 
 
     }
