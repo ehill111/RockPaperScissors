@@ -25,17 +25,25 @@ namespace RPSGame
         int setScore;
         int gameScore;
         string playerType;
-        string player;
-        string playerOne;
-        string playerTwo;
-        string playerThree;
+        Players EricTheHuman;
+        Players AmariTheHuman;
+        Players CruncherTheComputer;
 
-        public Game(string playerType, string player)
+        /*public Game(int NumberOfRounds)
         {
-            this.playerType = playerType;
-            this.player = player;
+            gameScore = NumberOfRounds;
             //So, I only "this." for parameters I pass?
-             
+            playerOne = new Players();
+            playerOne.point++;
+        }*/
+
+        //Constructor
+        public Game()
+        {
+            EricTheHuman = new Players();
+            AmariTheHuman = new Players();
+            CruncherTheComputer = new Players();
+            
         }
 
 

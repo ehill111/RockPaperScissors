@@ -8,6 +8,9 @@ namespace RPSGame
 {
     class Human : Players
     {
+        public Human()
+        {
 
+        }
     }
 }
