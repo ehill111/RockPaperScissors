@@ -15,22 +15,18 @@ namespace RPSGame
             //Players thing = new Players();
             //Players bob = new Computer("Bob");
             //Players frank = new Human("Frank");
-           
+
+            //Players bob = new Computer("Bob");
+            //Players frank = new Human("Frank");
+
+            //bob.SelectGesture();
+            //frank.SelectGesture();
+
+            Game game = new Game();//Brett
             
-                //Random random = new Random();
-                //List<string> list = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+            game.RunGame();//Brett
+            Console.ReadLine();
 
-                //int index = random.Next(list.Count);
-
-                //Console.WriteLine(list[index]);
-                //Console.ReadLine(); 
-
-                Players bob = new Computer("Bob");
-                Players frank = new Human("Frank");
-
-                bob.SelectGesture();
-                frank.SelectGesture();
-            
 
         }
     }

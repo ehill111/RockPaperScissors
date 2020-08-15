@@ -13,16 +13,16 @@ namespace RPSGame
             this.name = name;
             
         }
-
-        public override void SelectGesture()
+ 
+        /*public override void SelectGesture()
         {
             Random random = new Random();
-            List<string> gestures = new List<string> { "Paper", "Rock", "Scissors", "Lizard", "Spock" };
+            List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
             int index = random.Next(gestures.Count);
             gesture = gestures[index];
 
             Console.WriteLine(gestures[index]);
             Console.ReadLine();
-        }
+        }*/
     }
 }

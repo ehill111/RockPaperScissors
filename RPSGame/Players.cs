@@ -6,23 +6,29 @@ using System.Threading.Tasks;
 
 namespace RPSGame
 {   //Member variables have/has a/an...
-    public class Players
+    //Why didn't Brett use public?
+    abstract class Players
     {
 
         public int point;
         public string name;
         public string gesture;
         
-     //Constructors initialize values upon instantiation.
+        
+     //Constructors initialize values upon instantiation. 
         public Players()
         {
             point = 0;
+            
         }
 
         //Methods do something.
         public virtual void SelectGesture()
+        
+
         {
-            
+            //displaying choices
+            //getting user input
             
             
         }
