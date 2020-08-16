@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,52 +23,48 @@ namespace RPSGame
 {   //Member variables have/has a/an...
     class Game
     {
-        public Players player1;//Brett
-        public Players player2;//Brett
+        public Players player1;
+        public Players player2;
 
 
         int setScore;
         int gameScore;
         string playerType;
-        Players EricTheHuman;
-        Players CruncherTheComputer;
-
-        /*public Game(int NumberOfRounds)
-        {
-            gameScore = NumberOfRounds;
-            //So, I only need "this." for parameters I pass?
-            playerOne = new Players();
-            playerOne.point++;
-        }*/
-
+       
+    
         //Constructor
         public Game()
         {
-            player1 = new Human();//Brett
-
-            //EricTheHuman = new Players();
-            //CruncherTheComputer = new Players();
-            
+            player1 = new Human();
+            player2 = new Computer();
         }
-
 
         //Methods do something
 
-        public void Welcome()
+        public void WelcomePlayer()
         {
-            Console.WriteLine("Welcome!");
+            Console.WriteLine("Welcome to the Paper, Rock, Scissors, Lizard, Spock game!");
+        }
+
+        public void DiscussObjective()
+        {
+            Console.WriteLine("The object of the game is to select a gesture that is superior to the gesture chosen by your opponent. The names of the gestures are here: 1. Rock, 2. Paper, 3. Scissors, 4. Lizard, and 5. Spock.");
+            
         }
 
         public void DisplayRules()
         {
-            Console.WriteLine("Here are the rules:");
+            Console.WriteLine(" Here are the relative values of each gesture: a. Rock crushes Scissors, b. Scissors cuts Paper, c. Paper covers Rock, d.Rock crushes Lizard, e. Lizard poisons Spock, f. Spock smashes Scissors, g. Scissors decapitates Lizard, h. Lizard eats Paper, i. Paper disproves Spock, j. Spock vaporizes Rock. The game will be played as follows: 1. Each player will select a gesture. 2. The player with the superior gesture wins a point. 3. If both players select the same gesture, no point is awarded and the players replay. 4. The player who wins two of three points wins the set. 5. The player who wins two of three rounds wins the game! Press any key when you are ready.");
+            Console.ReadLine();
+            Console.WriteLine("Let's play!");
         }
 
-        public void DeterminePlayer2()//Brett
+        public void DeterminePlayer2()
         {
-            Console.WriteLine("Do you want 1 player game or 2 player game?");//Brett
-            string response = Console.ReadLine();//Brett
-            if ()
+            Console.WriteLine("Select your opponent. Type 1 for a computer or type 2 for a human.");
+            Console.ReadLine();
+            string response = Console.ReadLine();
+            if (response == "1")
             {
                 player2 = new Human();
             }
@@ -78,32 +75,47 @@ namespace RPSGame
 
         }
 
-      
+        public void CompareGestures()
+        {
+            //p1 gets a point
+            //p2 gets a point
+            //tie round
+        }
+
+        public void DisplayWinnerOfGame()
+        {
+
+        }
 
         public void RunGame()//Brett
         {
             //INTRO SECTION
             //Welcome message
+            Welcome();
             //Display rules
-            //Choose game mode: human vs human or human vs computer
-            //Optional game variable: player name, number of rounds, etc. These may include set-up things that aren't actually part of the game.
+            DisplayRules();
+            //Choose game mode - human vs human or human vs computer, computer vs computer?
+            DeterminePlayer2();
+            //Optional game variables: player name, number of rounds
 
 
-            //ROUNDS OF GAMEPLAY (use a loop, probably while loop)
+            //Rounds of gameplay - use a loop, while loop?
             //display gesture options if human
-            //player1 makes gesture choice
-            //display gesture optionsl if human
-            //player2 makes gesture choice
+            //player1 makes a gesture choice
+            player1.ChooseGesture();
+            //display gesture options if human
+            //player2 makes a gesture choice
+            player2.ChooseGesture();
             //compare the player's gestures
+            CompareGestures();
             //winner gets a point
-            //point must be saved
-            //move on to next round (if no one yas won yet)
+            //move on to next round (if no one has won yet)
 
 
             //Endgame
             //Display the winner
-            //Ask if user wants to play again.
-
+            DisplayWinnerOfGame();
+            //Optional: Ask if the user wants to play again?
 
 
 

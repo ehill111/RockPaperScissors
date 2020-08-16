@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSGame
 {
-    class Gestures
+    /*class Gestures
     {
         int rock;
         int paper;
@@ -28,7 +28,12 @@ namespace RPSGame
             int index = t.Next(0,5);
             Console.WriteLine(gestures[index]);
             Console.ReadLine();
-        }
+
+            
+        }*/
+
+
+        
 
 
 
@@ -36,5 +41,5 @@ namespace RPSGame
 
 
 
-    }
+    
 }

@@ -14,15 +14,18 @@ namespace RPSGame
             this.name = name;
         }
 
+        //Constructor
         public override void SelectGesture()
         {
+
+            Console.WriteLine("Please enter the number that represents your choice of gesture. Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, and Spock = 4.");
             List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
             int index = int.Parse(Console.ReadLine());
             gesture = gestures[index];
-
-            Console.WriteLine("Please enter the number that represents your choice of gesture. Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, and Spock = 4.");
-            string response = Console.ReadLine();
-            Console.WriteLine();
+            int result = index;
+           
+            Console.ReadLine();
+            Console.WriteLine(gesture[index]); 
 
            
         }

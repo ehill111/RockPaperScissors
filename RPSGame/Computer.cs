@@ -8,21 +8,34 @@ namespace RPSGame
 {
     class Computer : Players
     {
-        public Computer(string name)
+        public Computer()
         {
             this.name = name;
             
         }
  
-        /*public override void SelectGesture()
+            //Constructor
+        public override void SelectGesture()
         {
-            Random random = new Random();
-            List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
-            int index = random.Next(gestures.Count);
-            gesture = gestures[index];
+            //Random random = new Random();
+            //List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+            //int index = random.Next(gestures.Count);
+            //gesture = gestures[index];
+            //Console.WriteLine("The debugger reached here.");
+            //Console.WriteLine(gestures[index]);
+            //Console.ReadLine();
 
-            Console.WriteLine(gestures[index]);
+            var random = new Random();
+
+            var list = new List<string> { "Paper", "Rock", "Scissors", "Lizard", "Spock" };
+            int index = random.Next(list.Count);
+
+            Console.WriteLine(list[index]);
             Console.ReadLine();
-        }*/
+
+        //Methods (do something)
+
+
+        }
     }
 }

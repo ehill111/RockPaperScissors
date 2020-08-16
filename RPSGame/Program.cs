@@ -23,9 +23,20 @@ namespace RPSGame
             //frank.SelectGesture();
 
             Game game = new Game();//Brett
-            
             game.RunGame();//Brett
-            Console.ReadLine();
+            //Console.WriteLine();
+            //Console.ReadLine();
+
+            /*{
+                var random = new Random();
+
+                var list = new List<string> { "Paper", "Rock", "Scissors", "Lizard", "Spock" };
+                int index = random.Next(list.Count);
+
+                Console.WriteLine(list[index]);
+                Console.ReadLine();
+            }*/
+
 
 
         }
