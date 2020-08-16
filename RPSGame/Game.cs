@@ -25,18 +25,28 @@ namespace RPSGame
     {
         public Players player1;
         public Players player2;
-
-
-        int setScore;
-        int gameScore;
-        string playerType;
+        string player1GestureSelection;
+        string player2GestureSelection;
+        string Rock;
+        string Paper;
+        string Scissors;
+        string Lizard;
+        string Spock;
+        int player1Score;
+        int player2Score;
+        int player1SetScore;
+        int player2SetScore;
+        int player1GameScore;
+        int player2GameScore;
+       
+       
        
     
         //Constructor
         public Game()
         {
             player1 = new Human();
-            player2 = new Computer();
+            
         }
 
         //Methods do something
@@ -67,19 +77,40 @@ namespace RPSGame
             if (response == "1")
             {
                 player2 = new Human();
+                Console.WriteLine("Your opponent is human.");
+                Console.ReadLine();
             }
             else
             {
                 player2 = new Computer();
+                Console.WriteLine("Your opponent is a computer.");
+                Console.ReadLine();
             }
 
         }
+
+        public void player1.SelectGesture()
+        {
+            string player1Selection;
+            
+        }
+
+        public void player2.SelectGesture()
+        {
+            string player2GestureSelection;
+        }
+
 
         public void CompareGestures()
         {
             //p1 gets a point
             //p2 gets a point
             //tie round
+            if (player1GestureSelection == "Rock" || (player2GestureSelection == Scissors && player2GestureSelection == Lizard)
+                {
+                    
+                }
+
         }
 
         public void DisplayWinnerOfGame()
