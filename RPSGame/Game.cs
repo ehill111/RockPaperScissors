@@ -96,7 +96,13 @@ namespace RPSGame
             string player1Selection;
             
         }
-              
+
+        public void player2.SelectGesture()//I don't know how to call a method from another class.
+        {
+            string player2GestureSelection;
+        }
+
+
         //Below are all the possible selections the players may make and the subsequent awarding of points.
         public void AwardPoints1()
             //Player1
@@ -161,12 +167,6 @@ namespace RPSGame
             {
                 player2Score = player2Score + 1;
             }
-        }
-            
-            
-        public void player2.SelectGesture()//I don't know how to call a method from another class.
-        {
-            string player2GestureSelection;
         }
 
         public void AwardPoints2()
@@ -233,16 +233,16 @@ namespace RPSGame
             }
         }
 
-            //Tie Hand
+        //Tie Hand
         public void AwardNoPoints()
-            //Both players
+        //Both players
         {
-             if (player1GestureSelection == "Rock" && player2GestureSelection == "Rock")
+            if (player1GestureSelection == "Rock" && player2GestureSelection == "Rock")
             {
                 Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
                 //Use SelectGesture. 
-            }   
-             else if (player1GestureSelection == "Paper" && player2GestureSelection == "Paper")
+            }
+            else if (player1GestureSelection == "Paper" && player2GestureSelection == "Paper")
             {
                 Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
                 //Use SelectGesture. 
@@ -264,53 +264,49 @@ namespace RPSGame
             }
 
         }
-           
+
+        public void CaptureSetPoints()
+        {
+            if (player1Score == 2)
+            {
+                player1SetScore = player1SetScore + 1;
+                player1GameScore = player1GameScore + 1;
+                Console.WriteLine("Congratulations! You've won the set. Two more sets and you win the whole game!");
+                player1Score = 0;//This is to reset player1Score and player2Score to 0 so the next set begins at 0.
+            }
+            else if (player2Score == 2)
+            {
+                player2SetScore = player2SetScore + 1;
+                player2GameScore = player2GameScore + 1;
+                Console.WriteLine("Congratulations! You've won the set. Two more sets and you win the whole game!");
+                player2Score = 0;//This is to reset player1Score and player2Score to 0 so the next set begins at 0.
+            }
+
+        }
+
         public void DisplayWinnerOfGame()
         {
-
+            if (player1GameScore == 3)
+            {
+                Console.WriteLine("Congratulations" + player1 + "! You've won the whole game!");
+                
+            }
+            else if (player2GameScore == 3)
+            {
+                Console.WriteLine("Congratulations" + player2 + "! You've won the whole game!");
+            }
         }
 
-        public void RunGame()//Brett
-        {
-            //INTRO SECTION
-            //Welcome message
-            Welcome();
-            //Display rules
-            DisplayRules();
-            //Choose game mode - human vs human or human vs computer, computer vs computer?
-            DeterminePlayer2();
-            //Optional game variables: player name, number of rounds
+       
 
-
-            //Rounds of gameplay - use a loop, while loop?
-            //display gesture options if human
-            //player1 makes a gesture choice
-            player1.ChooseGesture();
-            //display gesture options if human
-            //player2 makes a gesture choice
-            player2.ChooseGesture();
-            //compare the player's gestures
-            CompareGestures();
-            //winner gets a point
-            //move on to next round (if no one has won yet)
-
-
-            //Endgame
-            //Display the winner
-            DisplayWinnerOfGame();
-            //Optional: Ask if the user wants to play again?
-
-
-
-
-
-        }
-
-
-
-
-
-
-
+         
     }
+
+
+
+
+
+
+
 }
+
