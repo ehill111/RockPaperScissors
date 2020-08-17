@@ -15,13 +15,14 @@ namespace RPSGame
         }
  
             //Constructor
-        public override void SelectGesture()
+        public override string SelectGesture()
         {
             Random random = new Random();
             List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
             int index = random.Next(gestures.Count);
             gesture = gestures[index];
-            Console.WriteLine("The debugger reached here.");
+            return gestures[index];
+            Console.WriteLine();
             Console.WriteLine(gestures[index]);
             Console.ReadLine();
 

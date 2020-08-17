@@ -5,20 +5,6 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-//Welcome to the game.
-//Name of Game: Paper, Rock, Scissors, Lizard, Spock
-//Purpose of Game: Use gestures to win points. 
-//Who plays the game?
-// * Humans and computers.
-//How game is played.
-// * Players simultaneously selects a gesture.
-// * Some gestures are worth more than others.
-// * Player with the most valuable gesture wins that round and a point.
-// * Each player's points are saved.
-// * First player to win two rounds wins that set.
-// * First player to win two sets wins the game.
-//Winner is declared champion!
-
 namespace RPSGame
 {   //Member variables have/has a/an...
     class Game
@@ -51,19 +37,22 @@ namespace RPSGame
 
         public void WelcomePlayer()
         {
-            Console.WriteLine("Welcome to the Paper, Rock, Scissors, Lizard, Spock game!");
+            Console.WriteLine("Welcome to the Paper, Rock, Scissors, Lizard, Spock game! Press any key to continue.");
+            Console.ReadLine();
         }
 
         public void DiscussObjective()
         {
-            Console.WriteLine("The object of the game is to select a gesture that is superior to the gesture chosen by your opponent. The names of the gestures are here: 1. Rock, 2. Paper, 3. Scissors, 4. Lizard, and 5. Spock.");
+            Console.WriteLine("The object of the game is to select a gesture that is superior to the gesture chosen by your opponent. The names of the gestures are here: 1. Rock, 2. Paper, 3. Scissors, 4. Lizard, and 5. Spock. Press enter.");
+            Console.ReadLine();
         }
 
         public void DisplayRules()
         {
             Console.WriteLine(" Here are the relative values of each gesture: a. Rock crushes Scissors, b. Scissors cuts Paper, c. Paper covers Rock, d.Rock crushes Lizard, e. Lizard poisons Spock, f. Spock smashes Scissors, g. Scissors decapitates Lizard, h. Lizard eats Paper, i. Paper disproves Spock, j. Spock vaporizes Rock. The game will be played as follows: 1. Each player will select a gesture. 2. The player with the superior gesture wins a point. 3. If both players select the same gesture, no point is awarded and the players replay. 4. The player who wins two of three points wins the set. 5. The player who wins two of three rounds wins the game! Press any key when you are ready.");
             Console.ReadLine();
-            Console.WriteLine("Let's play!");
+            Console.WriteLine("Let's play! Press enter.");
+            Console.ReadLine();
         }
 
         public void DeterminePlayer2()
@@ -80,7 +69,7 @@ namespace RPSGame
             else
             {
                 player2 = new Computer();
-                Console.WriteLine("Your opponent is a computer.");
+                Console.WriteLine("Your opponent is a computer. Press enter.");
                 Console.ReadLine();
             }
 
@@ -88,19 +77,19 @@ namespace RPSGame
 
         public void PromptForGesture()
         {
-            Console.WriteLine("You may now select a gesture. Enter one of the numbers: (1) Rock, (2) Paper, (3) Scissors, (4) Lizard, or (5) Spock.");
+            Console.WriteLine("You may now select a gesture. Enter one of the numbers: (1) Rock, (2) Paper, (3) Scissors, (4) Lizard, or (5) Spock. Enter a number and press enter.");
         }
 
-        public void player1.SelectGesture()//I don't know how to call a method from another class.
-        {
-            string player1Selection;
+        //public void player1.SelectGesture()//I don't know how to call a method from another class.
+        //{
+        //    string player1Selection;
             
-        }
+        //}
 
-        public void player2.SelectGesture()//I don't know how to call a method from another class.
-        {
-            string player2GestureSelection;
-        }
+        //public void player2.SelectGesture()//I don't know how to call a method from another class.
+        //{
+        //    string player2GestureSelection;
+        //}
 
 
         //Below are all the possible selections the players may make and the subsequent awarding of points.
@@ -109,7 +98,7 @@ namespace RPSGame
 
             //Rock
         {
-            if (player1GestureSelection == "Rock" || (player2GestureSelection == Scissors && player2GestureSelection == Lizard))
+            if (player1GestureSelection == "Rock" && (player2GestureSelection == Scissors) || (player2GestureSelection == Lizard))
             {
                 player1Score = player1Score + 1;
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
@@ -121,7 +110,7 @@ namespace RPSGame
             }
 
             //Paper
-            if (player1GestureSelection == "Paper" || (player2GestureSelection == Rock && player2GestureSelection == Spock))
+            if (player1GestureSelection == "Paper" && (player2GestureSelection == Rock) || (player2GestureSelection == Spock))
             {
                 player1Score = player1Score + 1;
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
@@ -133,7 +122,7 @@ namespace RPSGame
             }
 
             //Scissors
-            if (player1GestureSelection == "Scissors" || (player2GestureSelection == Paper && player2GestureSelection == Lizard))
+            if (player1GestureSelection == "Scissors" && (player2GestureSelection == Paper) || (player2GestureSelection == Lizard))
             {
                 player1Score = player1Score + 1;
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
@@ -145,7 +134,7 @@ namespace RPSGame
             }
 
             //Lizard
-            if (player1GestureSelection == "Lizard" || (player2GestureSelection == Spock && player2GestureSelection == Paper))
+            if (player1GestureSelection == "Lizard" && (player2GestureSelection == Spock) || (player2GestureSelection == Paper))
             {
                 player1Score = player1Score + 1;
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
@@ -157,7 +146,7 @@ namespace RPSGame
             }
 
             //Spock
-            if (player1GestureSelection == "Spock" || (player2GestureSelection == Scissors && player2GestureSelection == Rock))
+            if (player1GestureSelection == "Spock" && (player2GestureSelection == Scissors) || (player2GestureSelection == Rock))
             {
                 player1Score = player1Score + 1;
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
@@ -173,7 +162,7 @@ namespace RPSGame
         {   //Player2
 
             //Rock
-            if (player2GestureSelection == "Rock" || (player1GestureSelection == Scissors && player1GestureSelection == Lizard))
+            if (player2GestureSelection == "Rock" && (player1GestureSelection == Scissors) || (player1GestureSelection == Lizard))
             {
                 player2Score = player1Score + 1;
                 Console.WriteLine("Congratulations " + player2 + "! You won the point!");
@@ -185,7 +174,7 @@ namespace RPSGame
             }
 
             //Paper
-            if (player2GestureSelection == "Paper" || (player1GestureSelection == Rock && player1GestureSelection == Spock))
+            if (player2GestureSelection == "Paper" && (player1GestureSelection == Rock) && (player1GestureSelection == Spock))
             {
                 player2Score = player2Score + 1;
                 Console.WriteLine("Congratulations " + player2 + "! You won the point!");
@@ -197,7 +186,7 @@ namespace RPSGame
             }
 
             //Scissors
-            if (player2GestureSelection == "Scissors" || (player1GestureSelection == Paper && player1GestureSelection == Lizard))
+            if (player2GestureSelection == "Scissors" && (player1GestureSelection == Paper) || (player1GestureSelection == Lizard))
             {
                 player2Score = player2Score + 1;
                 Console.WriteLine("Congratulations " + player2 + "! You won the point!");
@@ -209,7 +198,7 @@ namespace RPSGame
             }
 
             //Lizard
-            if (player2GestureSelection == "Lizard" || (player1GestureSelection == Spock && player1GestureSelection == Paper))
+            if (player2GestureSelection == "Lizard" && (player1GestureSelection == Spock) || (player1GestureSelection == Paper))
             {
                 player2Score = player2Score + 1;
                 Console.WriteLine("Congratulations " + player2 + "! You won the point!");
@@ -221,7 +210,7 @@ namespace RPSGame
             }
 
             //Spock
-            if (player2GestureSelection == "Spock" || (player1GestureSelection == Scissors && player1GestureSelection == Rock))
+            if (player2GestureSelection == "Spock" && (player1GestureSelection == Scissors) || (player1GestureSelection == Rock))
             {
                 player2Score = player2Score + 1;
                 Console.WriteLine("Congratulations " + player2 + "! You won the point!");
@@ -297,9 +286,35 @@ namespace RPSGame
             }
         }
 
-       
+        public void RunGame()
+        {
+            WelcomePlayer();
 
-         
+            DiscussObjective();
+
+            DisplayRules();
+            //Choose game mode - human vs human or human vs computer, computer vs computer?
+            DeterminePlayer2();
+
+            player1GestureSelection = player1.SelectGesture();
+            player2GestureSelection = player2.SelectGesture();
+
+            PromptForGesture();
+
+            AwardPoints1();
+
+            AwardPoints2();
+
+            AwardNoPoints();
+
+            CaptureSetPoints();
+
+            DisplayWinnerOfGame();
+           
+
+        }
+
+
     }
 
 
