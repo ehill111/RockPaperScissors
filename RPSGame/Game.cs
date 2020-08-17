@@ -32,16 +32,14 @@ namespace RPSGame
         string Scissors;
         string Lizard;
         string Spock;
-        int player1Score;
-        int player2Score;
-        int player1SetScore;
-        int player2SetScore;
-        int player1GameScore;
-        int player2GameScore;
+        int player1Score = 0;
+        int player2Score = 0;
+        int player1SetScore = 0;
+        int player2SetScore = 0;
+        int player1GameScore = 0;
+        int player2GameScore = 0;
        
-       
-       
-    
+           
         //Constructor
         public Game()
         {
@@ -59,7 +57,6 @@ namespace RPSGame
         public void DiscussObjective()
         {
             Console.WriteLine("The object of the game is to select a gesture that is superior to the gesture chosen by your opponent. The names of the gestures are here: 1. Rock, 2. Paper, 3. Scissors, 4. Lizard, and 5. Spock.");
-            
         }
 
         public void DisplayRules()
@@ -89,30 +86,135 @@ namespace RPSGame
 
         }
 
-        public void player1.SelectGesture()
+        public void PromptForGesture()
+        {
+            Console.WriteLine("You may now select a gesture. Enter one of the numbers: (1) Rock, (2) Paper, (3) Scissors, (4) Lizard, or (5) Spock.");
+        }
+
+        public void player1.SelectGesture()//I don't know how to call a method from another class.
         {
             string player1Selection;
             
         }
+              
+        public void AwardPoints1()
+            //Player1
 
-        public void player2.SelectGesture()
+            //Rock
+        {
+            if (player1GestureSelection == "Rock" || (player2GestureSelection == Scissors && player2GestureSelection == Lizard))
+            {
+                player1Score = player1Score + 1;
+            }
+            else
+            {
+                player2Score = player2Score + 1;
+            }
+
+            //Paper
+            if (player1GestureSelection == "Paper" || (player2GestureSelection == Rock && player2GestureSelection == Spock))
+            {
+                player1Score = player1Score + 1;
+            }
+            else
+            {
+                player2Score = player2Score + 1;
+            }
+
+            //Scissors
+            if (player1GestureSelection == "Scissors" || (player2GestureSelection == Paper && player2GestureSelection == Lizard))
+            {
+                player1Score = player1Score + 1;
+            }
+            else
+            {
+                player2Score = player2Score + 1;
+            }
+
+            //Lizard
+            if (player1GestureSelection == "Lizard" || (player2GestureSelection == Spock && player2GestureSelection == Paper))
+            {
+                player1Score = player1Score + 1;
+            }
+            else
+            {
+                player2Score = player2Score + 1;
+            }
+
+            //Spock
+            if (player1GestureSelection == "Spock" || (player2GestureSelection == Scissors && player2GestureSelection == Rock))
+            {
+                player1Score = player1Score + 1;
+            }
+            else
+            {
+                player2Score = player2Score + 1;
+            }
+        }
+            
+            
+        public void player2.SelectGesture()//I don't know how to call a method from another class.
         {
             string player2GestureSelection;
         }
 
+        public void AwardPoints2()
+        {   //Player2
 
-        public void CompareGestures()
-        {
-            //p1 gets a point
-            //p2 gets a point
-            //tie round
-            if (player1GestureSelection == "Rock" || (player2GestureSelection == Scissors && player2GestureSelection == Lizard)
-                {
-                    
-                }
+            //Rock
+            if (player2GestureSelection == "Rock" || (player1GestureSelection == Scissors && player1GestureSelection == Lizard))
+            {
+                player2Score = player1Score + 1;
+            }
+            else
+            {
+                player1Score = player1Score + 1;
+            }
 
+            //Paper
+            if (player2GestureSelection == "Paper" || (player1GestureSelection == Rock && player1GestureSelection == Spock))
+            {
+                player2Score = player2Score + 1;
+            }
+            else
+            {
+                player2Score = player2Score + 1;
+            }
+
+            //Scissors
+            if (player2GestureSelection == "Scissors" || (player1GestureSelection == Paper && player1GestureSelection == Lizard))
+            {
+                player2Score = player2Score + 1;
+            }
+            else
+            {
+                player1Score = player1Score + 1;
+            }
+
+            //Lizard
+            if (player2GestureSelection == "Lizard" || (player1GestureSelection == Spock && player1GestureSelection == Paper))
+            {
+                player2Score = player2Score + 1;
+            }
+            else
+            {
+                player1Score = player1Score + 1;
+            }
+
+            //Spock
+            if (player2GestureSelection == "Spock" || (player1GestureSelection == Scissors && player1GestureSelection == Rock))
+            {
+                player2Score = player2Score + 1;
+            }
+            else
+            {
+                player1Score = player1Score + 1;
+            }
         }
 
+        
+        //Tie Hand
+           
         public void DisplayWinnerOfGame()
         {
 
