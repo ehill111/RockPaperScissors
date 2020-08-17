@@ -97,6 +97,7 @@ namespace RPSGame
             
         }
               
+        //Below are all the possible selections the players may make and the subsequent awarding of points.
         public void AwardPoints1()
             //Player1
 
@@ -212,8 +213,37 @@ namespace RPSGame
             }
         }
 
-        
-        //Tie Hand
+            //Tie Hand
+        public void AwardNoPoints()
+            //Both players
+        {
+             if (player1GestureSelection == "Rock" && player2GestureSelection == "Rock")
+            {
+                Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
+                //Use SelectGesture. 
+            }   
+             else if (player1GestureSelection == "Paper" && player2GestureSelection == "Paper")
+            {
+                Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
+                //Use SelectGesture. 
+            }
+            else if (player1GestureSelection == "Scissors" && player2GestureSelection == "Scissors")
+            {
+                Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
+                //Use SelectGesture. 
+            }
+            else if (player1GestureSelection == "Lizard" && player2GestureSelection == "Lizard")
+            {
+                Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
+                //Use SelectGesture. 
+            }
+            else if (player1GestureSelection == "Spock" && player2GestureSelection == "Spock")
+            {
+                Console.WriteLine("This hand is a tie. You both chose the same gesture. Please make another selection.");
+                //Use SelectGesture. 
+            }
+
+        }
            
         public void DisplayWinnerOfGame()
         {
