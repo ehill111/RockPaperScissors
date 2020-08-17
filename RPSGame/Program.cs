@@ -26,7 +26,7 @@ namespace RPSGame
             game.RunGame();//Brett
             Console.WriteLine();
             Console.ReadLine();
-
+            
             /*{
                 var random = new Random();
 

@@ -18,9 +18,9 @@ namespace RPSGame
         public override string SelectGesture()
         {
 
-            Console.WriteLine("Please enter the number that represents your choice of gesture. Rock = 0, Paper = 1, Scissors = 2, Lizard = 3, and Spock = 4.");
+            Console.WriteLine("Please enter the number that represents your choice of gesture. Rock = 1, Paper = 2, Scissors = 3, Lizard = 4, and Spock = 5.");
             List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
-            int index = int.Parse(Console.ReadLine());
+            int index = int.Parse(Console.ReadLine()) - 1;
             gesture = gestures[index];
             return gestures[index];
             int result = index;

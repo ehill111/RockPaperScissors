@@ -21,6 +21,7 @@ namespace RPSGame
             List<string> gestures = new List<string> { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
             int index = random.Next(gestures.Count);
             gesture = gestures[index];
+          
             return gestures[index];
             Console.WriteLine();
             Console.WriteLine(gestures[index]);
