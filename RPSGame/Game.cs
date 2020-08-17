@@ -106,6 +106,8 @@ namespace RPSGame
             if (player1GestureSelection == "Rock" || (player2GestureSelection == Scissors && player2GestureSelection == Lizard))
             {
                 player1Score = player1Score + 1;
+                Console.WriteLine("Congratulations " + player1 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
             }
             else
             {
@@ -116,6 +118,8 @@ namespace RPSGame
             if (player1GestureSelection == "Paper" || (player2GestureSelection == Rock && player2GestureSelection == Spock))
             {
                 player1Score = player1Score + 1;
+                Console.WriteLine("Congratulations " + player1 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
             }
             else
             {
@@ -126,6 +130,8 @@ namespace RPSGame
             if (player1GestureSelection == "Scissors" || (player2GestureSelection == Paper && player2GestureSelection == Lizard))
             {
                 player1Score = player1Score + 1;
+                Console.WriteLine("Congratulations " + player1 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
             }
             else
             {
@@ -136,6 +142,8 @@ namespace RPSGame
             if (player1GestureSelection == "Lizard" || (player2GestureSelection == Spock && player2GestureSelection == Paper))
             {
                 player1Score = player1Score + 1;
+                Console.WriteLine("Congratulations " + player1 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
             }
             else
             {
@@ -146,6 +154,8 @@ namespace RPSGame
             if (player1GestureSelection == "Spock" || (player2GestureSelection == Scissors && player2GestureSelection == Rock))
             {
                 player1Score = player1Score + 1;
+                Console.WriteLine("Congratulations " + player1 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
             }
             else
             {
@@ -166,6 +176,8 @@ namespace RPSGame
             if (player2GestureSelection == "Rock" || (player1GestureSelection == Scissors && player1GestureSelection == Lizard))
             {
                 player2Score = player1Score + 1;
+                Console.WriteLine("Congratulations " + player2 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player1 + ". You didn't win this time.");
             }
             else
             {
@@ -176,6 +188,8 @@ namespace RPSGame
             if (player2GestureSelection == "Paper" || (player1GestureSelection == Rock && player1GestureSelection == Spock))
             {
                 player2Score = player2Score + 1;
+                Console.WriteLine("Congratulations " + player2 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player1 + ". You didn't win this time.");
             }
             else
             {
@@ -186,6 +200,8 @@ namespace RPSGame
             if (player2GestureSelection == "Scissors" || (player1GestureSelection == Paper && player1GestureSelection == Lizard))
             {
                 player2Score = player2Score + 1;
+                Console.WriteLine("Congratulations " + player2 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player1 + ". You didn't win this time.");
             }
             else
             {
@@ -196,6 +212,8 @@ namespace RPSGame
             if (player2GestureSelection == "Lizard" || (player1GestureSelection == Spock && player1GestureSelection == Paper))
             {
                 player2Score = player2Score + 1;
+                Console.WriteLine("Congratulations " + player2 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player1 + ". You didn't win this time.");
             }
             else
             {
@@ -206,6 +224,8 @@ namespace RPSGame
             if (player2GestureSelection == "Spock" || (player1GestureSelection == Scissors && player1GestureSelection == Rock))
             {
                 player2Score = player2Score + 1;
+                Console.WriteLine("Congratulations " + player2 + "! You won the point!");
+                Console.WriteLine("Sorry, " + player1 + ". You didn't win this time.");
             }
             else
             {
