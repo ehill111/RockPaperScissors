@@ -72,22 +72,11 @@ namespace RPSGame
 
         public void PromptForGesture()
         {
-            //while loop
-           while (player1Score < 3 && player2Score < 3)
-
-            Console.WriteLine("You may now select a gesture: (0) Rock, (1) Paper, (2) Scissors, (3) Lizard, or (4) Spock. Enter a number and press Enter.");
-            string result = Console.ReadLine();
-            result = player1GestureSelection;
-
-            if (player1Score == 2)
-            {
-                Console.WriteLine("Congratulations" + player1 + "! You've won the whole game!");
-
-            }
-            else if (player2Score == 2)
-            {
-                Console.WriteLine("Congratulations" + player2 + "! You've won the whole game!");
-            }
+            player1GestureSelection = player1.SelectGesture();
+            player2GestureSelection = player2.SelectGesture();
+            //Console.Clear();
+            Console.WriteLine("Player 1 picked: " + player1GestureSelection);
+            Console.WriteLine("Player 2 picked: " + player2GestureSelection);
         }
         //Below are all the possible selections the players may make and the subsequent awarding of points.
         public void AwardPoints()
@@ -101,7 +90,7 @@ namespace RPSGame
             }
             else if (player1GestureSelection == "Rock" && (player2GestureSelection == "Scissors" || player2GestureSelection == "Lizard"))
             {
-                player1Score = player1Score++;
+                player1Score++;
                 Console.WriteLine(player1Score);
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
                 Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
@@ -109,7 +98,7 @@ namespace RPSGame
             //Paper
             else if (player1GestureSelection == "Paper" && (player2GestureSelection == "Rock" || player2GestureSelection == "Spock"))
             {
-                player1Score = player1Score++;
+                 player1Score++;
                 Console.WriteLine(player1Score);
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
                 Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
@@ -117,7 +106,7 @@ namespace RPSGame
             //Scissors
             else if (player1GestureSelection == "Scissors" && (player2GestureSelection == "Paper" || player2GestureSelection == "Lizard"))
             {
-                player1Score = player1Score++;
+                player1Score++;
                 Console.WriteLine(player1Score);
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
                 Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
@@ -126,7 +115,7 @@ namespace RPSGame
             else if (player1GestureSelection == "Lizard" && (player2GestureSelection == "Spock" || player2GestureSelection == "Paper"))
             {
                 
-                player1Score = player1Score++;
+                player1Score++;
                 Console.WriteLine(player1Score);
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
                 Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
@@ -135,7 +124,7 @@ namespace RPSGame
             else if (player1GestureSelection == "Spock" && (player2GestureSelection == "Scissors" || player2GestureSelection == "Rock"))
             {
                 
-                player1Score = player1Score++;
+                player1Score++;
                 Console.WriteLine(player1Score);
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
                 Console.WriteLine("Sorry, " + player2 + ". You didn't win this time.");
@@ -143,30 +132,42 @@ namespace RPSGame
             else
             {
                 
-                player2Score = player2Score++;
+                player2Score++;
                 Console.WriteLine(player2Score);
                 Console.WriteLine("Congratulations " + player1 + "! You won the point!");
                 Console.WriteLine("Sorry, " + player2.name + ". You didn't win this time.");
             }
 
-            
+            Console.WriteLine("Player 1 score is : " + player1Score);
+            Console.WriteLine("Player 2 score is : " + player2Score);
+
         }
 
         
        
         public void DisplayWinnerOfGame()
         {
-            //if (player1Score == 2)
-            //{
-            //    Console.WriteLine("Congratulations" + player1 + "! You've won the whole game!");
+            if (player1Score == 2)
+            {
+                Console.WriteLine("Congratulations" + player1 + "! You've won the whole game!");
 
-            //}
-            //else if (player2Score == 2)
-            //{
-            //    Console.WriteLine("Congratulations" + player2 + "! You've won the whole game!");
-            //}
+            }
+            else if (player2Score == 2)
+            {
+                Console.WriteLine("Congratulations" + player2 + "! You've won the whole game!");
+            }
+            Console.WriteLine("Thank you for playing my game!");
+            Console.ReadLine();
         }
+        public void RunRounds()
+        {
+            while (player1Score < 2 && player2Score < 2)
+            {
+                PromptForGesture();
 
+                AwardPoints();
+            }
+        }
        public void RunGame()
         {
             WelcomePlayer();
@@ -177,13 +178,9 @@ namespace RPSGame
             //Choose game mode - human vs human or human vs computer, computer vs computer?
             DeterminePlayer2();
 
-            player1GestureSelection = player1.SelectGesture();
-            player2GestureSelection = player2.SelectGesture();
-            //Console.Clear();
-            Console.WriteLine("Player 1 picked: " + player1GestureSelection);
-            Console.WriteLine("Player 2 picked: " + player2GestureSelection);
-
-            AwardPoints();
+            RunRounds();
+           
+           
 
             // AwardNoPoints();
 
