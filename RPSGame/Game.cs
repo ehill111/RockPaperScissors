@@ -22,7 +22,7 @@ namespace RPSGame
         public Game()
         {
             player1 = new Human();
-
+            
         }
 
         //Methods do something

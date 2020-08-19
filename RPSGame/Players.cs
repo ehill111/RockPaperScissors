@@ -23,7 +23,11 @@ namespace RPSGame
         }
 
         //Methods do something.
-        public abstract string SelectGesture();
+        public virtual string SelectGesture()
+        {
+            // human way 
+            return "";
+        }
         
 
         
